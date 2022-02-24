@@ -96,3 +96,22 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 48450318336
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+
+# Automatically implies these:
+BOARD_HAS_NO_REAL_SDCARD := false
+TW_USE_TOOLBOX := true
+TW_EXCLUDE_SUPERSU := false
+TW_EXCLUDE_MTP := false
+TW_OEM_BUILD := false
+
+# Add EXT4 support
+TARGET_USERIMAGES_USE_EXT4 := true
+
+# Disable/enable SELinux. Only suggested when you want to enable SELinux support
+TWHAVE_SELINUX := true
+
+# include Logcat daemon for help in debugging
+TWRP_INCLUDE_LOGCAT := true
+
+# Log touch input
+TWRP_EVENT_LOGGING := true
